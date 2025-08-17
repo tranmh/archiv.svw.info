@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>  
+
+    <title>SVWARCHIV</title>
+    <meta name="description" content="Das digitale Archiv des Schachverbandes Baden-Württemberg">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="author" content="fkamos at bitbee.org">
+        <meta name="copyright" content="(c) 2014 the bitbees">
+        <meta name="keywords" lang="de" content="schachverband,württemberg,archiv">
+        <meta name="keywords" lang="en" content="chess,association,baden-württemberg,archive">
+        <meta name="robots" content="follow,index">
+        <meta http-equiv="Content-Language" content="de">
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/svwarchiv.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <link href="css/apiary-defaults.css" rel="stylesheet"> -->
+		        <link rel="stylesheet"  href="css/selectize.css" />
+        <!--[if lt IE 9]><script src="css/es5-shim.min.js"></script><![endif]-->
+             
+</head>
+<body role="document">
+<div class="container page-header">
+<span id="page-logo" class="pull-left"> <img src="svwlogo.gif"></span>
+<span class="h1" id="title">
+	Schachverband W&uuml;rttemberg e.V. - <br></span>
+<span class="h3" id="subtitle">Digitales Archiv</span>
+
+<span class="pull-right">
+<form  id="login_form" name="apiary_login_form" action="index.html" method="post">
+		<input id="login_name"" placeholder="Benutzername" type="text" name="login_name" size="10" value="" />
+		<input id="password"" placeholder="Passwort" type="password" name="login_pass" size="10" />
+		<button class="btn primary" type="submit" name="Login" value="Login">Login</button>
+                </form></span>
+
+</div><!-- header -->
+
+<div id="navigation" class="container">
+   <div class="navbar navbar-default" role="navigation">
+		  <div class="navbar-header">
+		  <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> -->
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  </button>
+		  </div>
+		  <div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav">
+			   <li id="Willkommen" class="active" title="Startseite"><a href="index.html">Willkommen</a>
+			   <li id="Archiv"  title="Öffentliches Modul zur Suche im Archiv - Nur öffentliche Dokumente werden angezeigt"><a href="archiv.html">Das Online-Archiv</a>
+			   <li id="Mitmachen"  title="Öffentliches Modul für Dateneingabe durch Besucher"><a href="mitmachen.html">Mitmachen</a>
+			   <li id="ArchivSuche"  title="Suche in Dokumenten nach Datum/Zeiträumen, Kategorien..."><a href="archivsuche.html">Suche</a>
+			   <li id="SchachInWuerttemberg"  title="Auszüge des Buchs "Schach in Württemberg" von Eberhard Herter"><a href="schachinwuerttemberg.html">Schach In Württemberg</a>
+			   <li id="WuerttembergRochade"  title="Württemberg-Rochade 1982-2000 Ausgabemodul"><a href="rochade/index.html">WürttembergRochade</a>
+		  </ul>
+		  </div><!--/.nav-collapse -->
+		  </div><!-- navbar-header -->
+		  </div>
+
+<div id="content" class="container">
+
+				<div class="table_header">
+				 
+				</div>
+				<div class="news">
+<div class="arrow-right"></div>
+<h5>Willkommen beim digitalen Archiv des Schachverbandes Württemberg</h5>
+Hier finden sich Dokumente zur Geschichte des Verbandes.  <a href="archiv.html">Stöbern</a> Sie im Bestand oder <a href="mitmachen.html">machen Sie mit</a> und reichen Sie Fotos, Texte oder Gegenstände ein.
+
+</div><div class="news">
+<div class="arrow-right"></div>
+<h5>Geschichte des Schachs in Württemberg von Eberhard Herter in digitaler Version</h5>
+Zu Geschichte des Württembergischen Schachverbandes gibt es das Buch von Prof. Eberhard Herter in Auszügen <a href="schachinwuerttemberg.html">hier</a>.
+</div><div class="news">
+<div class="arrow-right"></div>
+<h5>Geschichte des UImer Schachs</h5>
+Juni 2015: Die sehr lesenswerte Chronik des Ulmer Schachs von Elmar Braig ist im Archiv erfasst und indexiert. Das Original ist <a href="http://www.schachgeschichte-ulms.schachvereine.de/">hier</a> abrufbar.
+
+</div><div class="news">
+<div class="arrow-right"></div>
+<h5>Württemberg-Rochade 1982 - 2000 digitalisiert</h5>
+Mai 2015: Die Württemberg-Rochaden der Jahre 1982 bis 2000 sind digitalisiert und per Texterkennung erfasst. Sie sind <a href="rochade/index.html">hier</a> zu finden. Dank an Copy Will in Fellbach!
+
+</div></div>
+
+<div class="container">
+ <div id="footer" class="footer"> &copy svw.info <br>
+ this site does not collect any information about its visitors, 
+ nor does it use cookies or other tracking technologies.<br>
+ archiv.svw.info sammelt keine daten irgendeiner art über besucher, die nicht
+ angemeldet sind.</div>
+</div>	
+<script src="css/jquery2.min.js"></script>
+<script src="css/selectize.min.js"></script>
+<script>
+$('.multiple_select').selectize({
+ hideSelected: true,
+ allowEmptyOption: true,
+ openOnFocus: false,
+ closeAfterSelect: true
+});
+</script>
+</body>
+ </html>

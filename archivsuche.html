@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>  
+
+    <title>Archiv-Suche - SVWARCHIV</title>
+    <meta name="description" content="Das digitale Archiv des Schachverbandes Baden-Württemberg - Erweiterte Suche">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="author" content="fkamos at bitbee.org">
+        <meta name="copyright" content="(c) 2014 the bitbees">
+        <meta name="keywords" lang="de" content="schachverband,württemberg,archiv,suche">
+        <meta name="keywords" lang="en" content="chess,association,baden-württemberg,archive,search">
+        <meta name="robots" content="follow,index">
+        <meta http-equiv="Content-Language" content="de">
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/svwarchiv.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <link href="css/apiary-defaults.css" rel="stylesheet"> -->
+		        <link rel="stylesheet"  href="css/selectize.css" />
+        <!--[if lt IE 9]><script src="css/es5-shim.min.js"></script><![endif]-->
+             
+</head>
+<body role="document">
+<div class="container page-header">
+<span id="page-logo" class="pull-left"> <img src="svwlogo.gif"></span>
+<span class="h1" id="title">
+	Schachverband W&uuml;rttemberg e.V. - <br></span>
+<span class="h3" id="subtitle">Digitales Archiv</span>
+
+<span class="pull-right">
+<form  id="login_form" name="apiary_login_form" action="index.html" method="post">
+		<input id="login_name"" placeholder="Benutzername" type="text" name="login_name" size="10" value="" />
+		<input id="password"" placeholder="Passwort" type="password" name="login_pass" size="10" />
+		<button class="btn primary" type="submit" name="Login" value="Login">Login</button>
+                </form></span>
+
+</div><!-- header -->
+
+<div id="navigation" class="container">
+   <div class="navbar navbar-default" role="navigation">
+		  <div class="navbar-header">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  </div>
+		  <div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav">
+			   <li id="Willkommen" title="Startseite"><a href="willkommen.html">Willkommen</a>
+			   <li id="Archiv" title="Öffentliches Modul zur Suche im Archiv - Nur öffentliche Dokumente werden angezeigt"><a href="archiv.html">Das Online-Archiv</a>
+			   <li id="Mitmachen" title="Öffentliches Modul für Dateneingabe durch Besucher"><a href="mitmachen.html">Mitmachen</a>
+			   <li id="ArchivSuche" class="active" title="Suche in Dokumenten nach Datum/Zeiträumen, Kategorien..."><a href="archivsuche.html">Suche</a>
+			   <li id="SchachInWuerttemberg" title="Auszüge des Buchs "Schach in Württemberg" von Eberhard Herter"><a href="schachinwuerttemberg.html">Schach In Württemberg</a>
+			   <li id="WuerttembergRochade" title="Württemberg-Rochade 1982-2000 Ausgabemodul"><a href="wuerttembergrochade.html">WürttembergRochade</a>
+		  </ul>
+		  </div><!--/.nav-collapse -->
+		  </div><!-- navbar-header -->
+		  </div>
+
+<div id="content" class="container">
+
+				<div class="table_header">
+				 <h2>Erweiterte Archiv-Suche</h2>
+				</div>
+				
+				<div class="archiv-content">
+					<div class="news">
+						<div class="arrow-right"></div>
+						<h5>Durchsuchen Sie das SVW-Archiv</h5>
+						<p>Mit der erweiterten Suchfunktion können Sie gezielt nach Dokumenten, Personen, 
+						Vereinen und Ereignissen in der Geschichte des württembergischen Schachs suchen. 
+						Alle digitalisierten Dokumente wurden per OCR-Texterkennung erfasst und sind 
+						vollständig durchsuchbar.</p>
+					</div>
+					
+					<div class="news">
+						<div class="arrow-right"></div>
+						<h5>Suchformular</h5>
+						
+						<div class="search-form">
+							<form action="#" method="get">
+								<div class="form-group">
+									<label for="volltext"><strong>Volltext-Suche:</strong></label>
+									<input type="text" id="volltext" name="volltext" class="form-control" 
+										   placeholder="Suchbegriff eingeben (z.B. Namen, Orte, Ereignisse)">
+									<small class="help-text">Suche in allen digitalisierten Texten</small>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="von_datum"><strong>Zeitraum von:</strong></label>
+										<input type="date" id="von_datum" name="von_datum" class="form-control">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="bis_datum"><strong>bis:</strong></label>
+										<input type="date" id="bis_datum" name="bis_datum" class="form-control">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="kategorie"><strong>Dokumentkategorie:</strong></label>
+									<select id="kategorie" name="kategorie" class="form-control multiple_select" multiple>
+										<option value="">Alle Kategorien</option>
+										<option value="rochade">Württemberg-Rochade</option>
+										<option value="protokolle">Protokolle</option>
+										<option value="satzungen">Satzungen & Ordnungen</option>
+										<option value="turniere">Turnierdokumentation</option>
+										<option value="fotos">Fotografien</option>
+										<option value="chroniken">Vereinschroniken</option>
+										<option value="ehrungen">Ehrungen & Auszeichnungen</option>
+										<option value="literatur">Schach-Literatur</option>
+									</select>
+								</div>
+								
+								<div class="form-group">
+									<label for="verein"><strong>Verein/Organisation:</strong></label>
+									<input type="text" id="verein" name="verein" class="form-control" 
+										   placeholder="Vereinsname (z.B. SK Stuttgart, SF Göppingen)">
+								</div>
+								
+								<div class="form-group">
+									<label for="person"><strong>Person:</strong></label>
+									<input type="text" id="person" name="person" class="form-control" 
+										   placeholder="Name der gesuchten Person">
+								</div>
+								
+								<div class="form-group">
+									<label for="ort"><strong>Ort:</strong></label>
+									<input type="text" id="ort" name="ort" class="form-control" 
+										   placeholder="Veranstaltungsort oder Vereinsort">
+								</div>
+								
+								<div class="form-actions">
+									<button type="submit" class="btn btn-primary">Suche starten</button>
+									<button type="reset" class="btn btn-secondary">Felder löschen</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					
+					<div class="news">
+						<div class="arrow-right"></div>
+						<h5>Such-Tipps</h5>
+						
+						<h6>Effektive Suchstrategien</h6>
+						<ul>
+							<li><strong>Kombinieren Sie Begriffe:</strong> "Stuttgart Meisterschaft 1995"</li>
+							<li><strong>Verwenden Sie Teilwörter:</strong> "Meister*" findet Meisterschaft, Meister, etc.</li>
+							<li><strong>Nutzen Sie Anführungszeichen:</strong> "Schachverband Württemberg" für exakte Phrasen</li>
+							<li><strong>Probieren Sie Varianten:</strong> Stuttgart, Stuttgarter, württembergisch, württemberg.</li>
+						</ul>
+						
+						<h6>Häufige Suchbegriffe</h6>
+						<ul>
+							<li><strong>Turniere:</strong> Landesmeisterschaft, Bezirksliga, Einzelmeisterschaft</li>
+							<li><strong>Personen:</strong> Vorstand, Präsident, Meister, Jugendwart</li>
+							<li><strong>Orte:</strong> Stuttgart, Ulm, Heilbronn, Reutlingen, Göppingen</li>
+							<li><strong>Ereignisse:</strong> Jubiläum, Gründung, Ehrung, Auszeichnung</li>
+						</ul>
+					</div>
+					
+					<div class="news">
+						<div class="arrow-right"></div>
+						<h5>Suchergebnis-Hinweise</h5>
+						
+						<p><strong>Ergebnisanzeige:</strong> Die Suchergebnisse zeigen relevante Textausschnitte 
+						mit hervorgehobenen Suchbegriffen. Klicken Sie auf ein Ergebnis, um das vollständige 
+						Dokument anzuzeigen.</p>
+						
+						<p><strong>PDF-Dokumente:</strong> Bei PDF-Dateien öffnet sich das Dokument mit 
+						aktivierter Suchfunktion, sodass Sie direkt zur gefundenen Stelle springen können.</p>
+						
+						<p><strong>Qualität der Texterkennung:</strong> Die OCR-Qualität variiert je nach 
+						Alter und Qualität der Originaldokumente. Bei älteren Dokumenten kann es zu 
+						Erkennungsfehlern kommen.</p>
+					</div>
+					
+					<div class="news">
+						<div class="arrow-right"></div>
+						<h5>Direktzugriff auf Sammlungen</h5>
+						<p>Für gezielte Recherchen können Sie auch direkt in unseren Hauptsammlungen suchen:</p>
+						<ul>
+							<li><a href="wuerttembergrochade.html">Württemberg-Rochade</a> - Durchsuchbar nach Jahren und Themen</li>
+							<li><a href="schachinwuerttemberg.html">Schach in Württemberg</a> - Herters Standardwerk zur Verbandsgeschichte</li>
+							<li><a href="archiv.html">Dokumentenarchiv</a> - Alle verfügbaren Kategorien im Überblick</li>
+						</ul>
+					</div>
+				</div>
+
+</div>
+
+<div class="container">
+ <div id="footer" class="footer"> &copy svw.info <br>
+ this site does not collect any information about its visitors, 
+ nor does it use cookies or other tracking technologies.<br>
+ archiv.svw.info sammelt keine daten irgendeiner art über besucher, die nicht
+ angemeldet sind.</div>
+</div>	
+<script src="css/jquery2.min.js"></script>
+<script src="css/selectize.min.js"></script>
+<script>
+$('.multiple_select').selectize({
+ hideSelected: true,
+ allowEmptyOption: true,
+ openOnFocus: false,
+ closeAfterSelect: true
+});
+</script>
+</body>
+ </html>

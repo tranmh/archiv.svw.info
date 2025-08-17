@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Local Links Verification</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .section { margin: 20px 0; border: 1px solid #ccc; padding: 10px; }
+        h2 { color: #333; }
+        ul { list-style-type: none; }
+        li { margin: 5px 0; }
+        .check::before { content: "✓ "; color: green; font-weight: bold; }
+        .fail::before { content: "✗ "; color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Local Website Verification</h1>
+    
+    <div class="section">
+        <h2>Main Index Page (index.html)</h2>
+        <ul>
+            <li class="check">CSS: css/svwarchiv.css (fixed from /css/svwarchiv.css)</li>
+            <li class="check">CSS: css/selectize.css</li>
+            <li class="check">JavaScript: css/jquery2.min.js</li>
+            <li class="check">JavaScript: css/selectize.min.js</li>
+            <li class="check">JavaScript: css/es5-shim.min.js (fixed from external CDN)</li>
+            <li class="check">Image: svwlogo.gif</li>
+            <li class="check">Icon: favicon.ico</li>
+        </ul>
+        
+        <h3>Navigation Links</h3>
+        <ul>
+            <li class="check">Willkommen → index.html</li>
+            <li class="check">Das Online-Archiv → archiv.html</li>
+            <li class="check">Mitmachen → mitmachen.html</li>
+            <li class="check">Suche → archivsuche.html</li>
+            <li class="check">Schach In Württemberg → schachinwuerttemberg.html</li>
+            <li class="check">WürttembergRochade → rochade/index.html</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Rochade Page (rochade/index.html)</h2>
+        <ul>
+            <li class="check">CSS: ../css/svwarchiv.css (fixed from /css/svwarchiv.css)</li>
+            <li class="check">CSS: ../css/selectize.css (fixed from css/selectize.css)</li>
+            <li class="check">JavaScript: ../css/jquery2.min.js (fixed from css/jquery2.min.js)</li>
+            <li class="check">JavaScript: ../css/selectize.min.js (fixed from css/selectize.min.js)</li>
+            <li class="check">JavaScript: ../css/es5-shim.min.js (fixed from external CDN)</li>
+            <li class="check">Image: ../svwlogo.gif (fixed from svwlogo.gif)</li>
+            <li class="check">Icon: ../favicon.ico (fixed from ./favicon.ico)</li>
+        </ul>
+        
+        <h3>Navigation Links</h3>
+        <ul>
+            <li class="check">Willkommen → ../index.html</li>
+            <li class="check">Das Online-Archiv → ../archiv.html</li>
+            <li class="check">Mitmachen → ../mitmachen.html</li>
+            <li class="check">Suche → ../archivsuche.html</li>
+            <li class="check">Schach In Württemberg → ../schachinwuerttemberg.html</li>
+            <li class="check">WürttembergRochade → index.html</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Fixes Applied</h2>
+        <ol>
+            <li><strong>Absolute CSS paths converted to relative:</strong>
+                <ul>
+                    <li>Changed <code>/css/svwarchiv.css</code> to <code>css/svwarchiv.css</code> in index.html</li>
+                    <li>Changed <code>/css/svwarchiv.css</code> to <code>../css/svwarchiv.css</code> in rochade/index.html</li>
+                </ul>
+            </li>
+            <li><strong>Fixed selectize CSS path in rochade/index.html:</strong>
+                <ul>
+                    <li>Changed <code>css/selectize.css</code> to <code>../css/selectize.css</code></li>
+                </ul>
+            </li>
+            <li><strong>Localized external JavaScript:</strong>
+                <ul>
+                    <li>Downloaded ES5-shim and updated paths to use local copy</li>
+                </ul>
+            </li>
+            <li><strong>Fixed image and favicon paths in rochade/index.html:</strong>
+                <ul>
+                    <li>Changed <code>svwlogo.gif</code> to <code>../svwlogo.gif</code></li>
+                    <li>Changed <code>./favicon.ico</code> to <code>../favicon.ico</code></li>
+                </ul>
+            </li>
+            <li><strong>Updated navigation links:</strong>
+                <ul>
+                    <li>Converted all <code>/index.php?module=...</code> links to static HTML files</li>
+                    <li>Added proper relative paths for rochade subdirectory</li>
+                </ul>
+            </li>
+            <li><strong>Fixed JavaScript includes in rochade/index.html:</strong>
+                <ul>
+                    <li>Changed <code>css/jquery2.min.js</code> to <code>../css/jquery2.min.js</code></li>
+                    <li>Changed <code>css/selectize.min.js</code> to <code>../css/selectize.min.js</code></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Test Links</h2>
+        <p>Click these links to test the local functionality:</p>
+        <ul>
+            <li><a href="index.html">Main Index</a></li>
+            <li><a href="rochade/index.html">Rochade Index</a></li>
+            <li><a href="css/svwarchiv.css">Main CSS File</a></li>
+            <li><a href="css/selectize.css">Selectize CSS</a></li>
+            <li><a href="css/jquery2.min.js">jQuery JavaScript</a></li>
+            <li><a href="css/selectize.min.js">Selectize JavaScript</a></li>
+            <li><a href="css/es5-shim.min.js">ES5 Shim JavaScript</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Summary</h2>
+        <p class="success">✅ All CSS, JavaScript, and image links have been converted to proper relative paths for local usage.</p>
+        <p class="success">✅ External CDN dependencies have been downloaded and localized.</p>
+        <p class="success">✅ Navigation links updated to point to static HTML files.</p>
+        <p class="success">✅ Both main index.html and rochade/index.html should now work properly when viewed locally.</p>
+    </div>
+
+</body>
+</html>

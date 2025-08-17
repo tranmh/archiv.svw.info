@@ -1,0 +1,2024 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>  
+
+    <title>SVWARCHIV</title>
+    <meta name="description" content="Das digitale Archiv des Schachverbandes Baden-Württemberg">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="author" content="fkamos at bitbee.org">
+        <meta name="copyright" content="(c) 2014 the bitbees">
+        <meta name="keywords" lang="de" content="schachverband,württemberg,archiv">
+        <meta name="keywords" lang="en" content="chess,association,baden-württemberg,archive">
+        <meta name="robots" content="follow,index">
+        <meta http-equiv="Content-Language" content="de">
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/svwarchiv.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <link href="css/apiary-defaults.css" rel="stylesheet"> -->
+		        <link rel="stylesheet"  href="../css/selectize.css" />
+        <!--[if lt IE 9]><script src="../css/es5-shim.min.js"></script><![endif]-->
+             
+</head>
+<body role="document">
+<div class="container page-header">
+<span id="page-logo" class="pull-left"> <img src="../svwlogo.gif"></span>
+<span class="h1" id="title">
+	Schachverband W&uuml;rttemberg e.V. - <br></span>
+<span class="h3" id="subtitle">Digitales Archiv</span>
+
+<span class="pull-right">
+<form  id="login_form" name="apiary_login_form" action="../index.html" method="post">	<input type="hidden" name="module" value="WuerttembergRochade" />
+		<input id="login_name"" placeholder="Benutzername" type="text" name="login_name" size="10" value="" />
+		<input id="password"" placeholder="Passwort" type="password" name="login_pass" size="10" />
+		<button class="btn primary" type="submit" name="Login" value="Login">Login</button>
+                </form></span>
+
+</div><!-- header -->
+
+<div id="navigation" class="container">
+   <div class="navbar navbar-default" role="navigation">
+		  <div class="navbar-header">
+		  <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> -->
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  </button>
+		  </div>
+		  <div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav">
+			   <li id="Willkommen"  title="Startseite"><a href="../index.html">Willkommen</a>
+			   <li id="Archiv"  title="Öffentliches Modul zur Suche im Archiv - Nur öffentliche Dokumente werden angezeigt"><a href="../archiv.html">Das Online-Archiv</a>
+			   <li id="Mitmachen"  title="Öffentliches Modul für Dateneingabe durch Besucher"><a href="../mitmachen.html">Mitmachen</a>
+			   <li id="ArchivSuche"  title="Suche in Dokumenten nach Datum/Zeiträumen, Kategorien..."><a href="../archivsuche.html">Suche</a>
+			   <li id="SchachInWuerttemberg"  title="Auszüge des Buchs "Schach in Württemberg" von Eberhard Herter"><a href="../schachinwuerttemberg.html">Schach In Württemberg</a>
+			   <li id="WuerttembergRochade" class="active" title="Württemberg-Rochade 1982-2000 Ausgabemodul"><a href="index.html">WürttembergRochade</a>
+		  </ul>
+		  </div><!--/.nav-collapse -->
+		  </div><!-- navbar-header -->
+		  </div>
+
+<div id="content" class="container">
+<div id="content" class="container">
+
+<div class="module_hlp">Die Württemberg Rochade 1982-2000 im PDF Format</div>
+Hier können Sie die digitalisierten Ausgaben der Württemberg-Rochade 1982 - 2000 herunterladen.
+Eine Volltextsuche in den PDFs ist ebenfalls möglich. 
+Die Texterkennung (OCR) funktioniert nur unvollständig, 
+daher sind auch die Original-Scans verlinkt 
+(Dateigrösse allerdings 10-30 MB und nicht nach Text durchsuchbar).
+<i>Dank an Dietrich Noffke und Roland Will Copyservice, Fellbach</i>
+
+ 
+
+<div class="pull-right">
+
+<form name="search" class="search_form" action="" method="get">
+<label class="search">Suche: <input type="text"
+	name="search_items[RochadeSuche][search_all_fields]"
+	value="" /></label>
+	
+<input type="hidden" name="module" value="WuerttembergRochade" />
+<input class="btn btn-primary" type="submit" name="search_submit[RochadeSuche]" value="Suchen" />
+</form>
+			
+</div>
+
+<style>
+/* style css table for rochade links */			
+div.table {
+  display: table;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+}
+div.table-row {display: table-row;}
+span.table-cell {  display: table-cell; }
+span.table-name { padding-right: 0.5em; }
+/* .table-head { font-weight: bold; } */
+div.table-row:nth-child(odd) { background-color: #e2e2e2;}
+div.table-row:nth-child(even){background-color: #f6f6f6;}
+.rochade_scan_link { 	color: #ff4466; }
+
+
+</style>
+
+<!-- rochade download links -->
+
+<div class="table" id="rochade-table">
+<div class="table-row">
+<span class="table-cell table-head table-name">Jahr</span>
+<span class="table-cell table-head">Jan</span>
+<span class="table-cell table-head">Feb</span>
+<span class="table-cell table-head">März</span>
+<span class="table-cell table-head">April</span>
+<span class="table-cell table-head">Mai</span>
+<span class="table-cell table-head">Juni</span>
+<span class="table-cell table-head">Juli</span>
+<span class="table-cell table-head">Aug</span>
+<span class="table-cell table-head">Sep</span>
+<span class="table-cell table-head">Okt</span>
+<span class="table-cell table-head">Nov</span>
+<span class="table-cell table-head">Dez</span>
+</div>
+
+<div class="table-row">
+
+<span class="table-cell table-name">1982</span>
+
+
+<span class="table-cell">
+n.a.</span>
+
+<span class="table-cell">
+n.a.</span>
+
+<span class="table-cell">
+n.a.</span>
+
+<span class="table-cell">
+n.a.</span>
+
+<span class="table-cell">
+n.a.</span>
+
+
+
+<span class="table-cell">
+<a target="_blank" alt="OCR-PDF Rochade-1982-06.pdf" title="OCR-PDF Rochade-1982-06.pdf" id="rochade1982-06" 
+href="rochade1982-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-06.pdf" title="Scan Rochade-1982-06.pdf" id="rochade1982-06scan"  class="rochade_scan_link"   
+href="original-rochade1982-06.pdf">Scan</a>
+</span>
+
+ 
+<span class="table-cell">
+<a target="_blank" alt="OCR-PDF Rochade-1982-07.pdf" title="OCR-PDF Rochade-1982-07.pdf" id="rochade1982-07" 
+href="rochade1982-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-07.pdf" title="Scan Rochade-1982-07.pdf" id="rochade1982-07scan"  class="rochade_scan_link"   
+href="original-rochade1982-07.pdf">Scan</a>
+</span>
+
+ 
+<span class="table-cell">
+<a target="_blank" alt="OCR-PDF Rochade-1982-08.pdf" title="OCR-PDF Rochade-1982-08.pdf" id="rochade1982-08" 
+href="rochade1982-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-08.pdf" title="Scan Rochade-1982-08.pdf" id="rochade1982-08scan"  class="rochade_scan_link"   
+href="original-rochade1982-08.pdf">Scan</a>
+</span>
+
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1982-09.pdf" title="OCR-PDF Rochade-1982-09.pdf" id="rochade1982-09" 
+href="rochade1982-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-09.pdf" title="Scan Rochade-1982-09.pdf" id="rochade1982-09scan"  class="rochade_scan_link"  
+href="original-rochade1982-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1982-10.pdf" title="OCR-PDF Rochade-1982-10.pdf" id="rochade1982-10" 
+href="rochade1982-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-10.pdf" title="Scan Rochade-1982-10.pdf" id="rochade1982-10scan"  class="rochade_scan_link"  
+href="original-rochade1982-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1982-11.pdf" title="OCR-PDF Rochade-1982-11.pdf" id="rochade1982-11" 
+href="rochade1982-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-11.pdf" title="Scan Rochade-1982-11.pdf" id="rochade1982-11scan"  class="rochade_scan_link"  
+href="original-rochade1982-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1982-12.pdf" title="OCR-PDF Rochade-1982-12.pdf" id="rochade1982-12" 
+href="rochade1982-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1982-12.pdf" title="Scan Rochade-1982-12.pdf" id="rochade1982-12scan"  class="rochade_scan_link"  
+href="original-rochade1982-12.pdf">Scan</a>
+</span>
+ 
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1983</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-01.pdf" title="OCR-PDF Rochade-1983-01.pdf" id="rochade1983-01" 
+href="rochade1983-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-01.pdf" title="Scan Rochade-1983-01.pdf" id="rochade1983-01scan"  class="rochade_scan_link"  
+href="original-rochade1983-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-02.pdf" title="OCR-PDF Rochade-1983-02.pdf" id="rochade1983-02" 
+href="rochade1983-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-02.pdf" title="Scan Rochade-1983-02.pdf" id="rochade1983-02scan"  class="rochade_scan_link"  
+href="original-rochade1983-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-03.pdf" title="OCR-PDF Rochade-1983-03.pdf" id="rochade1983-03" 
+href="rochade1983-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-03.pdf" title="Scan Rochade-1983-03.pdf" id="rochade1983-03scan"  class="rochade_scan_link"  
+href="original-rochade1983-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-04.pdf" title="OCR-PDF Rochade-1983-04.pdf" id="rochade1983-04" 
+href="rochade1983-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-04.pdf" title="Scan Rochade-1983-04.pdf" id="rochade1983-04scan"  class="rochade_scan_link"  
+href="original-rochade1983-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-05.pdf" title="OCR-PDF Rochade-1983-05.pdf" id="rochade1983-05" 
+href="rochade1983-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-05.pdf" title="Scan Rochade-1983-05.pdf" id="rochade1983-05scan"  class="rochade_scan_link"  
+href="original-rochade1983-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-06.pdf" title="OCR-PDF Rochade-1983-06.pdf" id="rochade1983-06" 
+href="rochade1983-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-06.pdf" title="Scan Rochade-1983-06.pdf" id="rochade1983-06scan"  class="rochade_scan_link"  
+href="original-rochade1983-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-07.pdf" title="OCR-PDF Rochade-1983-07.pdf" id="rochade1983-07" 
+href="rochade1983-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-07.pdf" title="Scan Rochade-1983-07.pdf" id="rochade1983-07scan"  class="rochade_scan_link"  
+href="original-rochade1983-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-08.pdf" title="OCR-PDF Rochade-1983-08.pdf" id="rochade1983-08" 
+href="rochade1983-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-08.pdf" title="Scan Rochade-1983-08.pdf" id="rochade1983-08scan"  class="rochade_scan_link"  
+href="original-rochade1983-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-09.pdf" title="OCR-PDF Rochade-1983-09.pdf" id="rochade1983-09" 
+href="rochade1983-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-09.pdf" title="Scan Rochade-1983-09.pdf" id="rochade1983-09scan"  class="rochade_scan_link"  
+href="original-rochade1983-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-10.pdf" title="OCR-PDF Rochade-1983-10.pdf" id="rochade1983-10" 
+href="rochade1983-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-10.pdf" title="Scan Rochade-1983-10.pdf" id="rochade1983-10scan"  class="rochade_scan_link"  
+href="original-rochade1983-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-11.pdf" title="OCR-PDF Rochade-1983-11.pdf" id="rochade1983-11" 
+href="rochade1983-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-11.pdf" title="Scan Rochade-1983-11.pdf" id="rochade1983-11scan"  class="rochade_scan_link"  
+href="original-rochade1983-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1983-12.pdf" title="OCR-PDF Rochade-1983-12.pdf" id="rochade1983-12" 
+href="rochade1983-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1983-12.pdf" title="Scan Rochade-1983-12.pdf" id="rochade1983-12scan"  class="rochade_scan_link"  
+href="original-rochade1983-12.pdf">Scan</a></td> 
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1984</span>
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-01.pdf" title="OCR-PDF Rochade-1984-01.pdf" id="rochade1984-01" 
+href="rochade1984-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-01.pdf" title="Scan Rochade-1984-01.pdf" id="rochade1984-01scan"  class="rochade_scan_link"  
+href="original-rochade1984-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-02.pdf" title="OCR-PDF Rochade-1984-02.pdf" id="rochade1984-02" 
+href="rochade1984-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-02.pdf" title="Scan Rochade-1984-02.pdf" id="rochade1984-02scan"  class="rochade_scan_link"  
+href="original-rochade1984-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-03.pdf" title="OCR-PDF Rochade-1984-03.pdf" id="rochade1984-03" 
+href="rochade1984-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-03.pdf" title="Scan Rochade-1984-03.pdf" id="rochade1984-03scan"  class="rochade_scan_link"  
+href="original-rochade1984-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-04.pdf" title="OCR-PDF Rochade-1984-04.pdf" id="rochade1984-04" 
+href="rochade1984-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-04.pdf" title="Scan Rochade-1984-04.pdf" id="rochade1984-04scan"  class="rochade_scan_link"  
+href="original-rochade1984-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-05.pdf" title="OCR-PDF Rochade-1984-05.pdf" id="rochade1984-05" 
+href="rochade1984-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-05.pdf" title="Scan Rochade-1984-05.pdf" id="rochade1984-05scan"  class="rochade_scan_link"  
+href="original-rochade1984-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-06.pdf" title="OCR-PDF Rochade-1984-06.pdf" id="rochade1984-06" 
+href="rochade1984-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-06.pdf" title="Scan Rochade-1984-06.pdf" id="rochade1984-06scan"  class="rochade_scan_link"  
+href="original-rochade1984-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-07.pdf" title="OCR-PDF Rochade-1984-07.pdf" id="rochade1984-07" 
+href="rochade1984-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-07.pdf" title="Scan Rochade-1984-07.pdf" id="rochade1984-07scan"  class="rochade_scan_link"  
+href="original-rochade1984-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-08.pdf" title="OCR-PDF Rochade-1984-08.pdf" id="rochade1984-08" 
+href="rochade1984-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-08.pdf" title="Scan Rochade-1984-08.pdf" id="rochade1984-08scan"  class="rochade_scan_link"  
+href="original-rochade1984-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-09.pdf" title="OCR-PDF Rochade-1984-09.pdf" id="rochade1984-09" 
+href="rochade1984-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-09.pdf" title="Scan Rochade-1984-09.pdf" id="rochade1984-09scan"  class="rochade_scan_link"  
+href="original-rochade1984-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-10.pdf" title="OCR-PDF Rochade-1984-10.pdf" id="rochade1984-10" 
+href="rochade1984-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-10.pdf" title="Scan Rochade-1984-10.pdf" id="rochade1984-10scan"  class="rochade_scan_link"  
+href="original-rochade1984-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-11.pdf" title="OCR-PDF Rochade-1984-11.pdf" id="rochade1984-11" 
+href="rochade1984-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-11.pdf" title="Scan Rochade-1984-11.pdf" id="rochade1984-11scan"  class="rochade_scan_link"  
+href="original-rochade1984-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1984-12.pdf" title="OCR-PDF Rochade-1984-12.pdf" id="rochade1984-12" 
+href="rochade1984-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1984-12.pdf" title="Scan Rochade-1984-12.pdf" id="rochade1984-12scan"  class="rochade_scan_link"  
+href="original-rochade1984-12.pdf">Scan</a></td>
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1985</span>
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-01.pdf" title="OCR-PDF Rochade-1985-01.pdf" id="rochade1985-01" 
+href="rochade1985-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-01.pdf" title="Scan Rochade-1985-01.pdf" id="rochade1985-01scan"  class="rochade_scan_link"  
+href="original-rochade1985-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-02.pdf" title="OCR-PDF Rochade-1985-02.pdf" id="rochade1985-02" 
+href="rochade1985-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-02.pdf" title="Scan Rochade-1985-02.pdf" id="rochade1985-02scan"  class="rochade_scan_link"  
+href="original-rochade1985-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-03.pdf" title="OCR-PDF Rochade-1985-03.pdf" id="rochade1985-03" 
+href="rochade1985-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-03.pdf" title="Scan Rochade-1985-03.pdf" id="rochade1985-03scan"  class="rochade_scan_link"  
+href="original-rochade1985-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-04.pdf" title="OCR-PDF Rochade-1985-04.pdf" id="rochade1985-04" 
+href="rochade1985-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-04.pdf" title="Scan Rochade-1985-04.pdf" id="rochade1985-04scan"  class="rochade_scan_link"  
+href="original-rochade1985-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-05.pdf" title="OCR-PDF Rochade-1985-05.pdf" id="rochade1985-05" 
+href="rochade1985-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-05.pdf" title="Scan Rochade-1985-05.pdf" id="rochade1985-05scan"  class="rochade_scan_link"  
+href="original-rochade1985-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-06.pdf" title="OCR-PDF Rochade-1985-06.pdf" id="rochade1985-06" 
+href="rochade1985-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-06.pdf" title="Scan Rochade-1985-06.pdf" id="rochade1985-06scan"  class="rochade_scan_link"  
+href="original-rochade1985-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-07.pdf" title="OCR-PDF Rochade-1985-07.pdf" id="rochade1985-07" 
+href="rochade1985-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-07.pdf" title="Scan Rochade-1985-07.pdf" id="rochade1985-07scan"  class="rochade_scan_link"  
+href="original-rochade1985-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-08.pdf" title="OCR-PDF Rochade-1985-08.pdf" id="rochade1985-08" 
+href="rochade1985-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-08.pdf" title="Scan Rochade-1985-08.pdf" id="rochade1985-08scan"  class="rochade_scan_link"  
+href="original-rochade1985-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-09.pdf" title="OCR-PDF Rochade-1985-09.pdf" id="rochade1985-09" 
+href="rochade1985-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-09.pdf" title="Scan Rochade-1985-09.pdf" id="rochade1985-09scan"  class="rochade_scan_link"  
+href="original-rochade1985-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-10.pdf" title="OCR-PDF Rochade-1985-10.pdf" id="rochade1985-10" 
+href="rochade1985-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-10.pdf" title="Scan Rochade-1985-10.pdf" id="rochade1985-10scan"  class="rochade_scan_link"  
+href="original-rochade1985-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-11.pdf" title="OCR-PDF Rochade-1985-11.pdf" id="rochade1985-11" 
+href="rochade1985-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-11.pdf" title="Scan Rochade-1985-11.pdf" id="rochade1985-11scan"  class="rochade_scan_link"  
+href="original-rochade1985-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1985-12.pdf" title="OCR-PDF Rochade-1985-12.pdf" id="rochade1985-12" 
+href="rochade1985-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1985-12.pdf" title="Scan Rochade-1985-12.pdf" id="rochade1985-12scan"  class="rochade_scan_link"  
+href="original-rochade1985-12.pdf">Scan</a></td> 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1986</span>
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-01.pdf" title="OCR-PDF Rochade-1986-01.pdf" id="rochade1986-01" 
+href="rochade1986-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-01.pdf" title="Scan Rochade-1986-01.pdf" id="rochade1986-01scan"  class="rochade_scan_link"  
+href="original-rochade1986-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-02.pdf" title="OCR-PDF Rochade-1986-02.pdf" id="rochade1986-02" 
+href="rochade1986-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-02.pdf" title="Scan Rochade-1986-02.pdf" id="rochade1986-02scan"  class="rochade_scan_link"  
+href="original-rochade1986-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-03.pdf" title="OCR-PDF Rochade-1986-03.pdf" id="rochade1986-03" 
+href="rochade1986-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-03.pdf" title="Scan Rochade-1986-03.pdf" id="rochade1986-03scan"  class="rochade_scan_link"  
+href="original-rochade1986-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-04.pdf" title="OCR-PDF Rochade-1986-04.pdf" id="rochade1986-04" 
+href="rochade1986-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-04.pdf" title="Scan Rochade-1986-04.pdf" id="rochade1986-04scan"  class="rochade_scan_link"  
+href="original-rochade1986-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-05.pdf" title="OCR-PDF Rochade-1986-05.pdf" id="rochade1986-05" 
+href="rochade1986-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-05.pdf" title="Scan Rochade-1986-05.pdf" id="rochade1986-05scan"  class="rochade_scan_link"  
+href="original-rochade1986-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-06.pdf" title="OCR-PDF Rochade-1986-06.pdf" id="rochade1986-06" 
+href="rochade1986-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-06.pdf" title="Scan Rochade-1986-06.pdf" id="rochade1986-06scan"  class="rochade_scan_link"  
+href="original-rochade1986-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-07.pdf" title="OCR-PDF Rochade-1986-07.pdf" id="rochade1986-07" 
+href="rochade1986-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-07.pdf" title="Scan Rochade-1986-07.pdf" id="rochade1986-07scan"  class="rochade_scan_link"  
+href="original-rochade1986-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-08.pdf" title="OCR-PDF Rochade-1986-08.pdf" id="rochade1986-08" 
+href="rochade1986-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-08.pdf" title="Scan Rochade-1986-08.pdf" id="rochade1986-08scan"  class="rochade_scan_link"  
+href="original-rochade1986-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-09.pdf" title="OCR-PDF Rochade-1986-09.pdf" id="rochade1986-09" 
+href="rochade1986-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-09.pdf" title="Scan Rochade-1986-09.pdf" id="rochade1986-09scan"  class="rochade_scan_link"  
+href="original-rochade1986-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-10.pdf" title="OCR-PDF Rochade-1986-10.pdf" id="rochade1986-10" 
+href="rochade1986-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-10.pdf" title="Scan Rochade-1986-10.pdf" id="rochade1986-10scan"  class="rochade_scan_link"  
+href="original-rochade1986-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-11.pdf" title="OCR-PDF Rochade-1986-11.pdf" id="rochade1986-11" 
+href="rochade1986-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-11.pdf" title="Scan Rochade-1986-11.pdf" id="rochade1986-11scan"  class="rochade_scan_link"  
+href="original-rochade1986-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1986-12.pdf" title="OCR-PDF Rochade-1986-12.pdf" id="rochade1986-12" 
+href="rochade1986-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1986-12.pdf" title="Scan Rochade-1986-12.pdf" id="rochade1986-12scan"  class="rochade_scan_link"  
+href="original-rochade1986-12.pdf">Scan</a></td> 
+
+</div>
+<div class="table-row">
+
+<span class="table-cell table-name">1987</span>
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-01.pdf" title="OCR-PDF Rochade-1987-01.pdf" id="rochade1987-01" 
+href="rochade1987-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-01.pdf" title="Scan Rochade-1987-01.pdf" id="rochade1987-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-02.pdf" title="OCR-PDF Rochade-1987-02.pdf" id="rochade1987-02" 
+href="rochade1987-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-02.pdf" title="Scan Rochade-1987-02.pdf" id="rochade1987-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-03.pdf" title="OCR-PDF Rochade-1987-03.pdf" id="rochade1987-03" 
+href="rochade1987-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-03.pdf" title="Scan Rochade-1987-03.pdf" id="rochade1987-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-04.pdf" title="OCR-PDF Rochade-1987-04.pdf" id="rochade1987-04" 
+href="rochade1987-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-04.pdf" title="Scan Rochade-1987-04.pdf" id="rochade1987-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-05.pdf" title="OCR-PDF Rochade-1987-05.pdf" id="rochade1987-05" 
+href="rochade1987-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-05.pdf" title="Scan Rochade-1987-05.pdf" id="rochade1987-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-06.pdf" title="OCR-PDF Rochade-1987-06.pdf" id="rochade1987-06" 
+href="rochade1987-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-06.pdf" title="Scan Rochade-1987-06.pdf" id="rochade1987-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-07.pdf" title="OCR-PDF Rochade-1987-07.pdf" id="rochade1987-07" 
+href="rochade1987-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-07.pdf" title="Scan Rochade-1987-07.pdf" id="rochade1987-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-08.pdf" title="OCR-PDF Rochade-1987-08.pdf" id="rochade1987-08" 
+href="rochade1987-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-08.pdf" title="Scan Rochade-1987-08.pdf" id="rochade1987-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-09.pdf" title="OCR-PDF Rochade-1987-09.pdf" id="rochade1987-09" 
+href="rochade1987-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-09.pdf" title="Scan Rochade-1987-09.pdf" id="rochade1987-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-10.pdf" title="OCR-PDF Rochade-1987-10.pdf" id="rochade1987-10" 
+href="rochade1987-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-10.pdf" title="Scan Rochade-1987-10.pdf" id="rochade1987-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-11.pdf" title="OCR-PDF Rochade-1987-11.pdf" id="rochade1987-11" 
+href="rochade1987-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-11.pdf" title="Scan Rochade-1987-11.pdf" id="rochade1987-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1987-12.pdf" title="OCR-PDF Rochade-1987-12.pdf" id="rochade1987-12" 
+href="rochade1987-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1987-12.pdf" title="Scan Rochade-1987-12.pdf" id="rochade1987-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1987-12.pdf">Scan</a></td> 
+
+
+</div>
+<div class="table-row table-name">
+
+<span class="table-cell">
+1988</span>
+
+
+<span class="table-cell">
+<a target="_blank" alt="OCR-PDF Rochade-1988-01.pdf" title="OCR-PDF Rochade-1988-01.pdf" id="rochade1988-01" 
+href="rochade1988-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-01.pdf" title="Scan Rochade-1988-01.pdf" id="rochade1988-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-02.pdf" title="OCR-PDF Rochade-1988-02.pdf" id="rochade1988-02" 
+href="rochade1988-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-02.pdf" title="Scan Rochade-1988-02.pdf" id="rochade1988-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-03.pdf" title="OCR-PDF Rochade-1988-03.pdf" id="rochade1988-03" 
+href="rochade1988-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-03.pdf" title="Scan Rochade-1988-03.pdf" id="rochade1988-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-04.pdf" title="OCR-PDF Rochade-1988-04.pdf" id="rochade1988-04" 
+href="rochade1988-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-04.pdf" title="Scan Rochade-1988-04.pdf" id="rochade1988-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-05.pdf" title="OCR-PDF Rochade-1988-05.pdf" id="rochade1988-05" 
+href="rochade1988-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-05.pdf" title="Scan Rochade-1988-05.pdf" id="rochade1988-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-06.pdf" title="OCR-PDF Rochade-1988-06.pdf" id="rochade1988-06" 
+href="rochade1988-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-06.pdf" title="Scan Rochade-1988-06.pdf" id="rochade1988-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-07.pdf" title="OCR-PDF Rochade-1988-07.pdf" id="rochade1988-07" 
+href="rochade1988-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-07.pdf" title="Scan Rochade-1988-07.pdf" id="rochade1988-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-08.pdf" title="OCR-PDF Rochade-1988-08.pdf" id="rochade1988-08" 
+href="rochade1988-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-08.pdf" title="Scan Rochade-1988-08.pdf" id="rochade1988-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-09.pdf" title="OCR-PDF Rochade-1988-09.pdf" id="rochade1988-09" 
+href="rochade1988-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-09.pdf" title="Scan Rochade-1988-09.pdf" id="rochade1988-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-10.pdf" title="OCR-PDF Rochade-1988-10.pdf" id="rochade1988-10" 
+href="rochade1988-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-10.pdf" title="Scan Rochade-1988-10.pdf" id="rochade1988-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-11.pdf" title="OCR-PDF Rochade-1988-11.pdf" id="rochade1988-11" 
+href="rochade1988-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-11.pdf" title="Scan Rochade-1988-11.pdf" id="rochade1988-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1988-12.pdf" title="OCR-PDF Rochade-1988-12.pdf" id="rochade1988-12" 
+href="rochade1988-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1988-12.pdf" title="Scan Rochade-1988-12.pdf" id="rochade1988-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1988-12.pdf">Scan</a></td>
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1989</span>
+
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-01.pdf" title="OCR-PDF Rochade-1989-01.pdf" id="rochade1989-01" 
+href="rochade1989-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-01.pdf" title="Scan Rochade-1989-01.pdf" id="rochade1989-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-02.pdf" title="OCR-PDF Rochade-1989-02.pdf" id="rochade1989-02" 
+href="rochade1989-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-02.pdf" title="Scan Rochade-1989-02.pdf" id="rochade1989-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-03.pdf" title="OCR-PDF Rochade-1989-03.pdf" id="rochade1989-03" 
+href="rochade1989-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-03.pdf" title="Scan Rochade-1989-03.pdf" id="rochade1989-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-04.pdf" title="OCR-PDF Rochade-1989-04.pdf" id="rochade1989-04" 
+href="rochade1989-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-04.pdf" title="Scan Rochade-1989-04.pdf" id="rochade1989-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-05.pdf" title="OCR-PDF Rochade-1989-05.pdf" id="rochade1989-05" 
+href="rochade1989-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-05.pdf" title="Scan Rochade-1989-05.pdf" id="rochade1989-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-06.pdf" title="OCR-PDF Rochade-1989-06.pdf" id="rochade1989-06" 
+href="rochade1989-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-06.pdf" title="Scan Rochade-1989-06.pdf" id="rochade1989-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-07.pdf" title="OCR-PDF Rochade-1989-07.pdf" id="rochade1989-07" 
+href="rochade1989-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-07.pdf" title="Scan Rochade-1989-07.pdf" id="rochade1989-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-08.pdf" title="OCR-PDF Rochade-1989-08.pdf" id="rochade1989-08" 
+href="rochade1989-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-08.pdf" title="Scan Rochade-1989-08.pdf" id="rochade1989-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-09.pdf" title="OCR-PDF Rochade-1989-09.pdf" id="rochade1989-09" 
+href="rochade1989-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-09.pdf" title="Scan Rochade-1989-09.pdf" id="rochade1989-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-10.pdf" title="OCR-PDF Rochade-1989-10.pdf" id="rochade1989-10" 
+href="rochade1989-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-10.pdf" title="Scan Rochade-1989-10.pdf" id="rochade1989-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-11.pdf" title="OCR-PDF Rochade-1989-11.pdf" id="rochade1989-11" 
+href="rochade1989-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-11.pdf" title="Scan Rochade-1989-11.pdf" id="rochade1989-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1989-12.pdf" title="OCR-PDF Rochade-1989-12.pdf" id="rochade1989-12" 
+href="rochade1989-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1989-12.pdf" title="Scan Rochade-1989-12.pdf" id="rochade1989-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1989-12.pdf">Scan</a></td> 
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1990</span>
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-01.pdf" title="OCR-PDF Rochade-1990-01.pdf" id="rochade1990-01" 
+href="rochade1990-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-01.pdf" title="Scan Rochade-1990-01.pdf" id="rochade1990-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-02.pdf" title="OCR-PDF Rochade-1990-02.pdf" id="rochade1990-02" 
+href="rochade1990-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-02.pdf" title="Scan Rochade-1990-02.pdf" id="rochade1990-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-03.pdf" title="OCR-PDF Rochade-1990-03.pdf" id="rochade1990-03" 
+href="rochade1990-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-03.pdf" title="Scan Rochade-1990-03.pdf" id="rochade1990-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-04.pdf" title="OCR-PDF Rochade-1990-04.pdf" id="rochade1990-04" 
+href="rochade1990-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-04.pdf" title="Scan Rochade-1990-04.pdf" id="rochade1990-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-05.pdf" title="OCR-PDF Rochade-1990-05.pdf" id="rochade1990-05" 
+href="rochade1990-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-05.pdf" title="Scan Rochade-1990-05.pdf" id="rochade1990-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-06.pdf" title="OCR-PDF Rochade-1990-06.pdf" id="rochade1990-06" 
+href="rochade1990-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-06.pdf" title="Scan Rochade-1990-06.pdf" id="rochade1990-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-07.pdf" title="OCR-PDF Rochade-1990-07.pdf" id="rochade1990-07" 
+href="rochade1990-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-07.pdf" title="Scan Rochade-1990-07.pdf" id="rochade1990-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-08.pdf" title="OCR-PDF Rochade-1990-08.pdf" id="rochade1990-08" 
+href="rochade1990-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-08.pdf" title="Scan Rochade-1990-08.pdf" id="rochade1990-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-09.pdf" title="OCR-PDF Rochade-1990-09.pdf" id="rochade1990-09" 
+href="rochade1990-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-09.pdf" title="Scan Rochade-1990-09.pdf" id="rochade1990-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-10.pdf" title="OCR-PDF Rochade-1990-10.pdf" id="rochade1990-10" 
+href="rochade1990-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-10.pdf" title="Scan Rochade-1990-10.pdf" id="rochade1990-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-11.pdf" title="OCR-PDF Rochade-1990-11.pdf" id="rochade1990-11" 
+href="rochade1990-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-11.pdf" title="Scan Rochade-1990-11.pdf" id="rochade1990-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1990-12.pdf" title="OCR-PDF Rochade-1990-12.pdf" id="rochade1990-12" 
+href="rochade1990-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1990-12.pdf" title="Scan Rochade-1990-12.pdf" id="rochade1990-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1990-12.pdf">Scan</a></td> 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1991</span>
+
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-01.pdf" title="OCR-PDF Rochade-1991-01.pdf" id="rochade1991-01" 
+href="rochade1991-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-01.pdf" title="Scan Rochade-1991-01.pdf" id="rochade1991-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-02.pdf" title="OCR-PDF Rochade-1991-02.pdf" id="rochade1991-02" 
+href="rochade1991-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-02.pdf" title="Scan Rochade-1991-02.pdf" id="rochade1991-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-03.pdf" title="OCR-PDF Rochade-1991-03.pdf" id="rochade1991-03" 
+href="rochade1991-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-03.pdf" title="Scan Rochade-1991-03.pdf" id="rochade1991-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-04.pdf" title="OCR-PDF Rochade-1991-04.pdf" id="rochade1991-04" 
+href="rochade1991-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-04.pdf" title="Scan Rochade-1991-04.pdf" id="rochade1991-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-05.pdf" title="OCR-PDF Rochade-1991-05.pdf" id="rochade1991-05" 
+href="rochade1991-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-05.pdf" title="Scan Rochade-1991-05.pdf" id="rochade1991-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-06.pdf" title="OCR-PDF Rochade-1991-06.pdf" id="rochade1991-06" 
+href="rochade1991-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-06.pdf" title="Scan Rochade-1991-06.pdf" id="rochade1991-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-07.pdf" title="OCR-PDF Rochade-1991-07.pdf" id="rochade1991-07" 
+href="rochade1991-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-07.pdf" title="Scan Rochade-1991-07.pdf" id="rochade1991-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-08.pdf" title="OCR-PDF Rochade-1991-08.pdf" id="rochade1991-08" 
+href="rochade1991-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-08.pdf" title="Scan Rochade-1991-08.pdf" id="rochade1991-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-09.pdf" title="OCR-PDF Rochade-1991-09.pdf" id="rochade1991-09" 
+href="rochade1991-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-09.pdf" title="Scan Rochade-1991-09.pdf" id="rochade1991-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-10.pdf" title="OCR-PDF Rochade-1991-10.pdf" id="rochade1991-10" 
+href="rochade1991-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-10.pdf" title="Scan Rochade-1991-10.pdf" id="rochade1991-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-11.pdf" title="OCR-PDF Rochade-1991-11.pdf" id="rochade1991-11" 
+href="rochade1991-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-11.pdf" title="Scan Rochade-1991-11.pdf" id="rochade1991-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1991-12.pdf" title="OCR-PDF Rochade-1991-12.pdf" id="rochade1991-12" 
+href="rochade1991-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1991-12.pdf" title="Scan Rochade-1991-12.pdf" id="rochade1991-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1991-12.pdf">Scan</a>
+</span>
+ 
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1992</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-01.pdf" title="OCR-PDF Rochade-1992-01.pdf" id="rochade1992-01" 
+href="rochade1992-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-01.pdf" title="Scan Rochade-1992-01.pdf" id="rochade1992-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-02.pdf" title="OCR-PDF Rochade-1992-02.pdf" id="rochade1992-02" 
+href="rochade1992-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-02.pdf" title="Scan Rochade-1992-02.pdf" id="rochade1992-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-03.pdf" title="OCR-PDF Rochade-1992-03.pdf" id="rochade1992-03" 
+href="rochade1992-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-03.pdf" title="Scan Rochade-1992-03.pdf" id="rochade1992-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-04.pdf" title="OCR-PDF Rochade-1992-04.pdf" id="rochade1992-04" 
+href="rochade1992-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-04.pdf" title="Scan Rochade-1992-04.pdf" id="rochade1992-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-05.pdf" title="OCR-PDF Rochade-1992-05.pdf" id="rochade1992-05" 
+href="rochade1992-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-05.pdf" title="Scan Rochade-1992-05.pdf" id="rochade1992-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-06.pdf" title="OCR-PDF Rochade-1992-06.pdf" id="rochade1992-06" 
+href="rochade1992-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-06.pdf" title="Scan Rochade-1992-06.pdf" id="rochade1992-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-07.pdf" title="OCR-PDF Rochade-1992-07.pdf" id="rochade1992-07" 
+href="rochade1992-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-07.pdf" title="Scan Rochade-1992-07.pdf" id="rochade1992-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-08.pdf" title="OCR-PDF Rochade-1992-08.pdf" id="rochade1992-08" 
+href="rochade1992-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-08.pdf" title="Scan Rochade-1992-08.pdf" id="rochade1992-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-09.pdf" title="OCR-PDF Rochade-1992-09.pdf" id="rochade1992-09" 
+href="rochade1992-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-09.pdf" title="Scan Rochade-1992-09.pdf" id="rochade1992-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-10.pdf" title="OCR-PDF Rochade-1992-10.pdf" id="rochade1992-10" 
+href="rochade1992-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-10.pdf" title="Scan Rochade-1992-10.pdf" id="rochade1992-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-11.pdf" title="OCR-PDF Rochade-1992-11.pdf" id="rochade1992-11" 
+href="rochade1992-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-11.pdf" title="Scan Rochade-1992-11.pdf" id="rochade1992-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1992-12.pdf" title="OCR-PDF Rochade-1992-12.pdf" id="rochade1992-12" 
+href="rochade1992-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1992-12.pdf" title="Scan Rochade-1992-12.pdf" id="rochade1992-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1992-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1993</span>
+
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-01.pdf" title="OCR-PDF Rochade-1993-01.pdf" id="rochade1993-01" 
+href="rochade1993-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-01.pdf" title="Scan Rochade-1993-01.pdf" id="rochade1993-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-02.pdf" title="OCR-PDF Rochade-1993-02.pdf" id="rochade1993-02" 
+href="rochade1993-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-02.pdf" title="Scan Rochade-1993-02.pdf" id="rochade1993-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-03.pdf" title="OCR-PDF Rochade-1993-03.pdf" id="rochade1993-03" 
+href="rochade1993-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-03.pdf" title="Scan Rochade-1993-03.pdf" id="rochade1993-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-04.pdf" title="OCR-PDF Rochade-1993-04.pdf" id="rochade1993-04" 
+href="rochade1993-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-04.pdf" title="Scan Rochade-1993-04.pdf" id="rochade1993-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-05.pdf" title="OCR-PDF Rochade-1993-05.pdf" id="rochade1993-05" 
+href="rochade1993-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-05.pdf" title="Scan Rochade-1993-05.pdf" id="rochade1993-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-06.pdf" title="OCR-PDF Rochade-1993-06.pdf" id="rochade1993-06" 
+href="rochade1993-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-06.pdf" title="Scan Rochade-1993-06.pdf" id="rochade1993-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-07.pdf" title="OCR-PDF Rochade-1993-07.pdf" id="rochade1993-07" 
+href="rochade1993-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-07.pdf" title="Scan Rochade-1993-07.pdf" id="rochade1993-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-08.pdf" title="OCR-PDF Rochade-1993-08.pdf" id="rochade1993-08" 
+href="rochade1993-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-08.pdf" title="Scan Rochade-1993-08.pdf" id="rochade1993-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-09.pdf" title="OCR-PDF Rochade-1993-09.pdf" id="rochade1993-09" 
+href="rochade1993-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-09.pdf" title="Scan Rochade-1993-09.pdf" id="rochade1993-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-10.pdf" title="OCR-PDF Rochade-1993-10.pdf" id="rochade1993-10" 
+href="rochade1993-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-10.pdf" title="Scan Rochade-1993-10.pdf" id="rochade1993-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-11.pdf" title="OCR-PDF Rochade-1993-11.pdf" id="rochade1993-11" 
+href="rochade1993-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-11.pdf" title="Scan Rochade-1993-11.pdf" id="rochade1993-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1993-12.pdf" title="OCR-PDF Rochade-1993-12.pdf" id="rochade1993-12" 
+href="rochade1993-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1993-12.pdf" title="Scan Rochade-1993-12.pdf" id="rochade1993-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1993-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1994</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-01.pdf" title="OCR-PDF Rochade-1994-01.pdf" id="rochade1994-01" 
+href="rochade1994-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-01.pdf" title="Scan Rochade-1994-01.pdf" id="rochade1994-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-02.pdf" title="OCR-PDF Rochade-1994-02.pdf" id="rochade1994-02" 
+href="rochade1994-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-02.pdf" title="Scan Rochade-1994-02.pdf" id="rochade1994-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-03.pdf" title="OCR-PDF Rochade-1994-03.pdf" id="rochade1994-03" 
+href="rochade1994-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-03.pdf" title="Scan Rochade-1994-03.pdf" id="rochade1994-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-04.pdf" title="OCR-PDF Rochade-1994-04.pdf" id="rochade1994-04" 
+href="rochade1994-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-04.pdf" title="Scan Rochade-1994-04.pdf" id="rochade1994-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-05.pdf" title="OCR-PDF Rochade-1994-05.pdf" id="rochade1994-05" 
+href="rochade1994-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-05.pdf" title="Scan Rochade-1994-05.pdf" id="rochade1994-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-06.pdf" title="OCR-PDF Rochade-1994-06.pdf" id="rochade1994-06" 
+href="rochade1994-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-06.pdf" title="Scan Rochade-1994-06.pdf" id="rochade1994-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-07.pdf" title="OCR-PDF Rochade-1994-07.pdf" id="rochade1994-07" 
+href="rochade1994-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-07.pdf" title="Scan Rochade-1994-07.pdf" id="rochade1994-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-08.pdf" title="OCR-PDF Rochade-1994-08.pdf" id="rochade1994-08" 
+href="rochade1994-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-08.pdf" title="Scan Rochade-1994-08.pdf" id="rochade1994-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-09.pdf" title="OCR-PDF Rochade-1994-09.pdf" id="rochade1994-09" 
+href="rochade1994-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-09.pdf" title="Scan Rochade-1994-09.pdf" id="rochade1994-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-10.pdf" title="OCR-PDF Rochade-1994-10.pdf" id="rochade1994-10" 
+href="rochade1994-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-10.pdf" title="Scan Rochade-1994-10.pdf" id="rochade1994-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-11.pdf" title="OCR-PDF Rochade-1994-11.pdf" id="rochade1994-11" 
+href="rochade1994-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-11.pdf" title="Scan Rochade-1994-11.pdf" id="rochade1994-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1994-12.pdf" title="OCR-PDF Rochade-1994-12.pdf" id="rochade1994-12" 
+href="rochade1994-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1994-12.pdf" title="Scan Rochade-1994-12.pdf" id="rochade1994-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1994-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1994</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-01.pdf" title="OCR-PDF Rochade-1995-01.pdf" id="rochade1995-01" 
+href="rochade1995-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-01.pdf" title="Scan Rochade-1995-01.pdf" id="rochade1995-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-02.pdf" title="OCR-PDF Rochade-1995-02.pdf" id="rochade1995-02" 
+href="rochade1995-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-02.pdf" title="Scan Rochade-1995-02.pdf" id="rochade1995-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-03.pdf" title="OCR-PDF Rochade-1995-03.pdf" id="rochade1995-03" 
+href="rochade1995-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-03.pdf" title="Scan Rochade-1995-03.pdf" id="rochade1995-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-04.pdf" title="OCR-PDF Rochade-1995-04.pdf" id="rochade1995-04" 
+href="rochade1995-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-04.pdf" title="Scan Rochade-1995-04.pdf" id="rochade1995-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-05.pdf" title="OCR-PDF Rochade-1995-05.pdf" id="rochade1995-05" 
+href="rochade1995-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-05.pdf" title="Scan Rochade-1995-05.pdf" id="rochade1995-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-06.pdf" title="OCR-PDF Rochade-1995-06.pdf" id="rochade1995-06" 
+href="rochade1995-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-06.pdf" title="Scan Rochade-1995-06.pdf" id="rochade1995-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-07.pdf" title="OCR-PDF Rochade-1995-07.pdf" id="rochade1995-07" 
+href="rochade1995-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-07.pdf" title="Scan Rochade-1995-07.pdf" id="rochade1995-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-08.pdf" title="OCR-PDF Rochade-1995-08.pdf" id="rochade1995-08" 
+href="rochade1995-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-08.pdf" title="Scan Rochade-1995-08.pdf" id="rochade1995-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-09.pdf" title="OCR-PDF Rochade-1995-09.pdf" id="rochade1995-09" 
+href="rochade1995-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-09.pdf" title="Scan Rochade-1995-09.pdf" id="rochade1995-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-10.pdf" title="OCR-PDF Rochade-1995-10.pdf" id="rochade1995-10" 
+href="rochade1995-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-10.pdf" title="Scan Rochade-1995-10.pdf" id="rochade1995-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-11.pdf" title="OCR-PDF Rochade-1995-11.pdf" id="rochade1995-11" 
+href="rochade1995-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-11.pdf" title="Scan Rochade-1995-11.pdf" id="rochade1995-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1995-12.pdf" title="OCR-PDF Rochade-1995-12.pdf" id="rochade1995-12" 
+href="rochade1995-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1995-12.pdf" title="Scan Rochade-1995-12.pdf" id="rochade1995-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1995-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1996</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-01.pdf" title="OCR-PDF Rochade-1996-01.pdf" id="rochade1996-01" 
+href="rochade1996-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-01.pdf" title="Scan Rochade-1996-01.pdf" id="rochade1996-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-02.pdf" title="OCR-PDF Rochade-1996-02.pdf" id="rochade1996-02" 
+href="rochade1996-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-02.pdf" title="Scan Rochade-1996-02.pdf" id="rochade1996-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-03.pdf" title="OCR-PDF Rochade-1996-03.pdf" id="rochade1996-03" 
+href="rochade1996-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-03.pdf" title="Scan Rochade-1996-03.pdf" id="rochade1996-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-04.pdf" title="OCR-PDF Rochade-1996-04.pdf" id="rochade1996-04" 
+href="rochade1996-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-04.pdf" title="Scan Rochade-1996-04.pdf" id="rochade1996-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-05.pdf" title="OCR-PDF Rochade-1996-05.pdf" id="rochade1996-05" 
+href="rochade1996-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-05.pdf" title="Scan Rochade-1996-05.pdf" id="rochade1996-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-06.pdf" title="OCR-PDF Rochade-1996-06.pdf" id="rochade1996-06" 
+href="rochade1996-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-06.pdf" title="Scan Rochade-1996-06.pdf" id="rochade1996-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-07.pdf" title="OCR-PDF Rochade-1996-07.pdf" id="rochade1996-07" 
+href="rochade1996-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-07.pdf" title="Scan Rochade-1996-07.pdf" id="rochade1996-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-08.pdf" title="OCR-PDF Rochade-1996-08.pdf" id="rochade1996-08" 
+href="rochade1996-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-08.pdf" title="Scan Rochade-1996-08.pdf" id="rochade1996-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-09.pdf" title="OCR-PDF Rochade-1996-09.pdf" id="rochade1996-09" 
+href="rochade1996-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-09.pdf" title="Scan Rochade-1996-09.pdf" id="rochade1996-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-10.pdf" title="OCR-PDF Rochade-1996-10.pdf" id="rochade1996-10" 
+href="rochade1996-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-10.pdf" title="Scan Rochade-1996-10.pdf" id="rochade1996-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-11.pdf" title="OCR-PDF Rochade-1996-11.pdf" id="rochade1996-11" 
+href="rochade1996-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-11.pdf" title="Scan Rochade-1996-11.pdf" id="rochade1996-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1996-12.pdf" title="OCR-PDF Rochade-1996-12.pdf" id="rochade1996-12" 
+href="rochade1996-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1996-12.pdf" title="Scan Rochade-1996-12.pdf" id="rochade1996-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1996-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1997</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-01.pdf" title="OCR-PDF Rochade-1997-01.pdf" id="rochade1997-01" 
+href="rochade1997-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-01.pdf" title="Scan Rochade-1997-01.pdf" id="rochade1997-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-02.pdf" title="OCR-PDF Rochade-1997-02.pdf" id="rochade1997-02" 
+href="rochade1997-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-02.pdf" title="Scan Rochade-1997-02.pdf" id="rochade1997-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-03.pdf" title="OCR-PDF Rochade-1997-03.pdf" id="rochade1997-03" 
+href="rochade1997-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-03.pdf" title="Scan Rochade-1997-03.pdf" id="rochade1997-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-04.pdf" title="OCR-PDF Rochade-1997-04.pdf" id="rochade1997-04" 
+href="rochade1997-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-04.pdf" title="Scan Rochade-1997-04.pdf" id="rochade1997-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-05.pdf" title="OCR-PDF Rochade-1997-05.pdf" id="rochade1997-05" 
+href="rochade1997-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-05.pdf" title="Scan Rochade-1997-05.pdf" id="rochade1997-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-06.pdf" title="OCR-PDF Rochade-1997-06.pdf" id="rochade1997-06" 
+href="rochade1997-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-06.pdf" title="Scan Rochade-1997-06.pdf" id="rochade1997-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-07.pdf" title="OCR-PDF Rochade-1997-07.pdf" id="rochade1997-07" 
+href="rochade1997-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-07.pdf" title="Scan Rochade-1997-07.pdf" id="rochade1997-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-08.pdf" title="OCR-PDF Rochade-1997-08.pdf" id="rochade1997-08" 
+href="rochade1997-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-08.pdf" title="Scan Rochade-1997-08.pdf" id="rochade1997-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-09.pdf" title="OCR-PDF Rochade-1997-09.pdf" id="rochade1997-09" 
+href="rochade1997-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-09.pdf" title="Scan Rochade-1997-09.pdf" id="rochade1997-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-10.pdf" title="OCR-PDF Rochade-1997-10.pdf" id="rochade1997-10" 
+href="rochade1997-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-10.pdf" title="Scan Rochade-1997-10.pdf" id="rochade1997-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-11.pdf" title="OCR-PDF Rochade-1997-11.pdf" id="rochade1997-11" 
+href="rochade1997-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-11.pdf" title="Scan Rochade-1997-11.pdf" id="rochade1997-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1997-12.pdf" title="OCR-PDF Rochade-1997-12.pdf" id="rochade1997-12" 
+href="rochade1997-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1997-12.pdf" title="Scan Rochade-1997-12.pdf" id="rochade1997-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1997-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1998</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-01.pdf" title="OCR-PDF Rochade-1998-01.pdf" id="rochade1998-01" 
+href="rochade1998-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-01.pdf" title="Scan Rochade-1998-01.pdf" id="rochade1998-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-02.pdf" title="OCR-PDF Rochade-1998-02.pdf" id="rochade1998-02" 
+href="rochade1998-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-02.pdf" title="Scan Rochade-1998-02.pdf" id="rochade1998-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-03.pdf" title="OCR-PDF Rochade-1998-03.pdf" id="rochade1998-03" 
+href="rochade1998-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-03.pdf" title="Scan Rochade-1998-03.pdf" id="rochade1998-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-04.pdf" title="OCR-PDF Rochade-1998-04.pdf" id="rochade1998-04" 
+href="rochade1998-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-04.pdf" title="Scan Rochade-1998-04.pdf" id="rochade1998-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-05.pdf" title="OCR-PDF Rochade-1998-05.pdf" id="rochade1998-05" 
+href="rochade1998-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-05.pdf" title="Scan Rochade-1998-05.pdf" id="rochade1998-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-06.pdf" title="OCR-PDF Rochade-1998-06.pdf" id="rochade1998-06" 
+href="rochade1998-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-06.pdf" title="Scan Rochade-1998-06.pdf" id="rochade1998-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-07.pdf" title="OCR-PDF Rochade-1998-07.pdf" id="rochade1998-07" 
+href="rochade1998-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-07.pdf" title="Scan Rochade-1998-07.pdf" id="rochade1998-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-08.pdf" title="OCR-PDF Rochade-1998-08.pdf" id="rochade1998-08" 
+href="rochade1998-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-08.pdf" title="Scan Rochade-1998-08.pdf" id="rochade1998-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-09.pdf" title="OCR-PDF Rochade-1998-09.pdf" id="rochade1998-09" 
+href="rochade1998-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-09.pdf" title="Scan Rochade-1998-09.pdf" id="rochade1998-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-10.pdf" title="OCR-PDF Rochade-1998-10.pdf" id="rochade1998-10" 
+href="rochade1998-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-10.pdf" title="Scan Rochade-1998-10.pdf" id="rochade1998-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-11.pdf" title="OCR-PDF Rochade-1998-11.pdf" id="rochade1998-11" 
+href="rochade1998-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-11.pdf" title="Scan Rochade-1998-11.pdf" id="rochade1998-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1998-12.pdf" title="OCR-PDF Rochade-1998-12.pdf" id="rochade1998-12" 
+href="rochade1998-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1998-12.pdf" title="Scan Rochade-1998-12.pdf" id="rochade1998-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1998-12.pdf">Scan</a>
+</span>
+ 
+
+
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">1999</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-01.pdf" title="OCR-PDF Rochade-1999-01.pdf" id="rochade1999-01" 
+href="rochade1999-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-01.pdf" title="Scan Rochade-1999-01.pdf" id="rochade1999-01scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-02.pdf" title="OCR-PDF Rochade-1999-02.pdf" id="rochade1999-02" 
+href="rochade1999-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-02.pdf" title="Scan Rochade-1999-02.pdf" id="rochade1999-02scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-03.pdf" title="OCR-PDF Rochade-1999-03.pdf" id="rochade1999-03" 
+href="rochade1999-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-03.pdf" title="Scan Rochade-1999-03.pdf" id="rochade1999-03scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-04.pdf" title="OCR-PDF Rochade-1999-04.pdf" id="rochade1999-04" 
+href="rochade1999-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-04.pdf" title="Scan Rochade-1999-04.pdf" id="rochade1999-04scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-05.pdf" title="OCR-PDF Rochade-1999-05.pdf" id="rochade1999-05" 
+href="rochade1999-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-05.pdf" title="Scan Rochade-1999-05.pdf" id="rochade1999-05scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-06.pdf" title="OCR-PDF Rochade-1999-06.pdf" id="rochade1999-06" 
+href="rochade1999-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-06.pdf" title="Scan Rochade-1999-06.pdf" id="rochade1999-06scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-06.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-07.pdf" title="OCR-PDF Rochade-1999-07.pdf" id="rochade1999-07" 
+href="rochade1999-07.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-07.pdf" title="Scan Rochade-1999-07.pdf" id="rochade1999-07scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-07.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-08.pdf" title="OCR-PDF Rochade-1999-08.pdf" id="rochade1999-08" 
+href="rochade1999-08.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-08.pdf" title="Scan Rochade-1999-08.pdf" id="rochade1999-08scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-08.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-09.pdf" title="OCR-PDF Rochade-1999-09.pdf" id="rochade1999-09" 
+href="rochade1999-09.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-09.pdf" title="Scan Rochade-1999-09.pdf" id="rochade1999-09scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-09.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-10.pdf" title="OCR-PDF Rochade-1999-10.pdf" id="rochade1999-10" 
+href="rochade1999-10.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-10.pdf" title="Scan Rochade-1999-10.pdf" id="rochade1999-10scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-10.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-11.pdf" title="OCR-PDF Rochade-1999-11.pdf" id="rochade1999-11" 
+href="rochade1999-11.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-11.pdf" title="Scan Rochade-1999-11.pdf" id="rochade1999-11scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-11.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-1999-12.pdf" title="OCR-PDF Rochade-1999-12.pdf" id="rochade1999-12" 
+href="rochade1999-12.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-1999-12.pdf" title="Scan Rochade-1999-12.pdf" id="rochade1999-12scan"  class="rochade_scan_link"  
+href="original-
+rochade1999-12.pdf">Scan</a>
+</span>
+ 
+
+</div>
+<div class="table-row">
+<span class="table-cell table-name">2000</span>
+
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-2000-01.pdf" title="OCR-PDF Rochade-2000-01.pdf" id="rochade2000-01" 
+href="rochade2000-01.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-2000-01.pdf" title="Scan Rochade-2000-01.pdf" id="rochade2000-01scan"  class="rochade_scan_link"  
+href="original-rochade2000-01.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-2000-02.pdf" title="OCR-PDF Rochade-2000-02.pdf" id="rochade2000-02" 
+href="rochade2000-02.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-2000-02.pdf" title="Scan Rochade-2000-02.pdf" id="rochade2000-02scan"  class="rochade_scan_link"  
+href="original-rochade2000-02.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-2000-03.pdf" title="OCR-PDF Rochade-2000-03.pdf" id="rochade2000-03" 
+href="rochade2000-03.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-2000-03.pdf" title="Scan Rochade-2000-03.pdf" id="rochade2000-03scan"  class="rochade_scan_link"  
+href="original-rochade2000-03.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-2000-04.pdf" title="OCR-PDF Rochade-2000-04.pdf" id="rochade2000-04" 
+href="rochade2000-04.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-2000-04.pdf" title="Scan Rochade-2000-04.pdf" id="rochade2000-04scan"  class="rochade_scan_link"  
+href="original-rochade2000-04.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-2000-05.pdf" title="OCR-PDF Rochade-2000-05.pdf" id="rochade2000-05" 
+href="rochade2000-05.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-2000-05.pdf" title="Scan Rochade-2000-05.pdf" id="rochade2000-05scan"  class="rochade_scan_link"  
+href="original-rochade2000-05.pdf">Scan</a>
+</span>
+ 
+<span class="table-cell">
+ <a target="_blank" alt="OCR-PDF Rochade-2000-06.pdf" title="OCR-PDF Rochade-2000-06.pdf" id="rochade2000-06" 
+href="rochade2000-06.pdf">PDF</a>
+<a target="_blank" alt="Scan Rochade-2000-06.pdf" title="Scan Rochade-2000-06.pdf" id="rochade2000-06scan"  class="rochade_scan_link"  
+href="original-rochade2000-06.pdf">Scan</a>
+</span>
+ 	
+
+
+
+<span class="table-cell">
+svw</span>
+
+<span class="table-cell">
+svw</span>
+
+<span class="table-cell">
+svw</span>
+
+<span class="table-cell">
+svw</span>
+
+<span class="table-cell">
+svw</span>
+
+<span class="table-cell">
+svw</span>
+
+
+</div>
+
+
+<div class="table-row">
+
+
+<span class="table-cell table-head table-name">Jahr</span>
+
+<span class="table-cell table-head">Jan</span>
+
+<span class="table-cell table-head">Feb</span>
+
+<span class="table-cell table-head">März</span>
+
+<span class="table-cell table-head">April</span>
+
+<span class="table-cell table-head">Mai</span>
+
+<span class="table-cell table-head">Juni</span>
+
+<span class="table-cell table-head">Juli</span>
+
+<span class="table-cell table-head">Aug</span>
+
+<span class="table-cell table-head">Sep</span>
+
+<span class="table-cell table-head">Okt</span>
+
+<span class="table-cell table-head">Nov</span>
+
+<span class="table-cell table-head">Dez</span>
+
+</div>
+</div>
+
+<br>Die Württemberg-Rochade ab Juli 2000 findet sich unter 
+<a target="_blank" href="http://schachzeitung.svw.info/" alt="svw schachzeitung">
+http://schachzeitung.svw.info</a>
+</div>
+
+</div>
+</div>
+
+<div class="container">
+ <div id="footer" class="footer"> &copy svw.info <br>
+ this site does not collect any information about its visitors, 
+ nor does it use cookies or other tracking technologies.<br>
+ archiv.svw.info sammelt keine daten irgendeiner art über besucher, die nicht
+ angemeldet sind.</div>
+</div>	
+<script src="../css/jquery2.min.js"></script>
+<script src="../css/selectize.min.js"></script>
+<script>
+$('.multiple_select').selectize({
+ hideSelected: true,
+ allowEmptyOption: true,
+ openOnFocus: false,
+ closeAfterSelect: true
+});
+</script>
+</body>
+ </html>
