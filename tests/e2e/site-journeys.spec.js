@@ -144,8 +144,7 @@ test.describe('Württemberg-Rochade', () => {
   });
 
   test('the year sections list the same issues as the PDF archive', async ({ page, request }) => {
-    test.skip(true, 'aqaa: open bug, see report');
-    // aqaa: suspected bug - year_sections.html lists January-May 1982 (marked n.a. in rochade/index.html,
+    // aqaa: bug - year_sections.html lists January-May 1982 (marked n.a. in rochade/index.html,
     // the first issue is June 1982), only five issues of 1999 and no year 2000 at all, while
     // rochade/index.html links all twelve 1999 issues and January-June 2000.
     const issuesOf = async (path, selector) => {
