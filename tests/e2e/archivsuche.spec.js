@@ -60,7 +60,6 @@ test.describe('archive search', () => {
   });
 
   test('"Felder löschen" also clears the chosen categories', async ({ page }) => {
-    test.skip(true, 'aqaa: open bug, see report');
     // aqaa: suspected bug - the reset button clears the text and date fields, but the categories chosen
     // in the selectize widget stay selected (selectize ignores the form reset), so they are still shown
     // and submitted with the next search.
