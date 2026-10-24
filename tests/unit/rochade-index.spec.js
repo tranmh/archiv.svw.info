@@ -75,8 +75,7 @@ test.describe('rochade/index.html', () => {
   });
 
   test('the year label of each row matches the issues it links to', async ({ page }) => {
-    test.skip(true, 'aqaa: open bug, see report');
-    // aqaa: suspected bug - the row with the 1995 issues (rochade1995-01 ... -12) is labelled "1994",
+    // aqaa: confirmed bug - the row with the 1995 issues (rochade1995-01 ... -12) is labelled "1994",
     // so 1994 appears twice and 1995 is missing from the year column.
     await page.goto('/rochade/index.html');
     const rows = await yearRows(page);
