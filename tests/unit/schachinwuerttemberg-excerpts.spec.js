@@ -96,8 +96,7 @@ test('the excerpt images and the book download link resolve on the static site',
 });
 
 test('excerpt pages render without failed requests', async ({ page }) => {
-  test.skip(true, 'aqaa: open bug, see report');
-  // aqaa: suspected bug - see above: the /index.php thumbnails fail with 404 and log console errors.
+  // aqaa: bug - see above: the /index.php thumbnails fail with 404 and log console errors.
   const problems = await watchPage(page);
   await page.goto(`/${pageOf(0)}`);
   await page.waitForLoadState('load');
