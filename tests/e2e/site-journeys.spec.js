@@ -56,10 +56,8 @@ test.describe('internal link crawl', () => {
   });
 
   test('the book excerpts can be reached from the "Schach in Württemberg" page', async ({ page, request }) => {
-    test.skip(true, 'aqaa: open bug, see report');
-    // aqaa: suspected bug - schachinwuerttemberg.html says the excerpts are "hier als digitale Auszüge
-    // verfügbar", but neither it nor any other main page links to schachinwuerttemberg_offset_*.html,
-    // so the 14 excerpt pages are orphaned.
+    // schachinwuerttemberg.html says the excerpts are "hier als digitale Auszüge verfügbar" (and its
+    // menu entry promises "Auszüge des Buchs"), so a visitor must be able to reach them by following links.
     await watchPage(page);
     const { visited } = await crawl(page, request, ['/index.html']);
     expect(visited).toContain('/schachinwuerttemberg_offset_0.html');
