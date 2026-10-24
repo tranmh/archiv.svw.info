@@ -1,0 +1,119 @@
+# The safety net of archiv.svw.info, written by aqaa from what its QA run found:
+# unit tests with coverage and its floor, integration tests against the databases they need, end-to-end tests,
+# lint, SAST and dependency audits (report only until the findings are triaged; SARIF goes to code scanning).
+# Actions are pinned to commit SHAs (the comment names the release); jobs get read-only tokens.
+name: aqaa quality
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  unit-web:
+    name: Unit tests (web)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Install build tools
+        run: npm install -g --no-audit --no-fund @playwright/test@1.56.1 http-server@14.1.1 linkinator@8.1.0 html-validate@11.16.2 && playwright install --with-deps chromium # zizmor: ignore[adhoc-packages] test tooling, pinned to exact versions
+      - name: Install dependencies
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          mkdir -p test-reports
+      - name: Unit tests
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          PLAYWRIGHT_JUNIT_OUTPUT_NAME="$PWD/test-reports/unit.xml" playwright test --config ci/web/playwright.config.cjs --project unit --reporter=junit,list
+      - if: always()
+        name: Upload test reports
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: unit-web
+          path: test-reports
+          if-no-files-found: ignore
+          retention-days: 14
+  e2e-web:
+    name: End-to-end tests (web)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Install build tools
+        run: npm install -g --no-audit --no-fund @playwright/test@1.56.1 http-server@14.1.1 linkinator@8.1.0 html-validate@11.16.2 && playwright install --with-deps chromium # zizmor: ignore[adhoc-packages] test tooling, pinned to exact versions
+      - name: Install dependencies
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          mkdir -p test-reports
+      - name: End-to-end tests
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          PLAYWRIGHT_JUNIT_OUTPUT_NAME="$PWD/test-reports/e2e.xml" playwright test --config ci/web/playwright.config.cjs --project e2e --reporter=junit,list
+      - if: always()
+        name: Upload test reports
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: e2e-web
+          path: test-reports
+          if-no-files-found: ignore
+          retention-days: 14
+  checks-web:
+    name: Static analysis (web)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Install build tools
+        run: npm install -g --no-audit --no-fund @playwright/test@1.56.1 http-server@14.1.1 linkinator@8.1.0 html-validate@11.16.2 && playwright install --with-deps chromium # zizmor: ignore[adhoc-packages] test tooling, pinned to exact versions
+      - name: Install dependencies
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          mkdir -p test-reports
+      - name: linkinator (lint, report only)
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          set --; for f in *.html *.htm; do if [ -e "$f" ]; then set -- "$@" "$f"; fi; done; if [ "$#" -eq 0 ]; then set -- .; fi
+          linkinator "$@" --recurse --skip '^(?!https?://(localhost|127\.0\.0\.1)[:/])'
+        continue-on-error: true
+      - name: html-validate (lint, report only)
+        run: |-
+          NODE_PATH="$(npm root -g)"; export NODE_PATH
+          if ls .htmlvalidate.json .htmlvalidate.js .htmlvalidate.cjs .htmlvalidate.mjs >/dev/null 2>&1; then
+            html-validate --ext html,htm .
+          else
+            html-validate --preset standard --ext html,htm .
+          fi
+        continue-on-error: true
