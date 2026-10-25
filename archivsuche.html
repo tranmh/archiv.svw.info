@@ -206,6 +206,12 @@ $('.multiple_select').selectize({
  openOnFocus: false,
  closeAfterSelect: true
 });
+// selectize ignores the native form reset, so clear the chosen categories ourselves
+$('.search-form form').on('reset', function () {
+ $(this).find('.multiple_select').each(function () {
+  this.selectize.clear();
+ });
+});
 </script>
 </body>
  </html>
